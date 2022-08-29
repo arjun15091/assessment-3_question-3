@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This is beans.xml file. This is a type of Spring configuration file.
+This is created with the configuration metadata that is later supplied to the
+Container  -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+   
+   <!-- <context:annotation-config/> looks for the annotations on beans in
+    the same application context it is defined in.  This is mainly used to
+     activate the dependency injection annotations.  -->
+     
+   <context:annotation-config/>
+   
+   <!-- Here we are passing the constructor requirements for class Address.
+  constructor-arg is used to initialize the values of constructors.
+  Here id is the object name and class is the path of your class-->
+  
+   <bean id="address" class="com.digit.autowired.Address">
+ <property name="Road" value="4thCrossRoad" />
+  <property name="flatno" value="191"/>
+  <property name="City" value="Bangalore"></property>
+ </bean>
+ 
+ 
+ <!-- Here we are passing the constructor requirements for class Employee.
+  constructor-arg is used to initialize the values of constructors.
+  Then we are initializing the contents of address using ref and stating 
+  the id in Address class -->
+  
+  <bean id="employee" class="com.digit.autowired.Employee">
+		<property name = "eid" value = "4724" />
+  <property name = "ename"  value = "Ronit"/>
+  <property name="Dept"  value="Technology"></property>
+		
+	</bean>
+
+</beans>

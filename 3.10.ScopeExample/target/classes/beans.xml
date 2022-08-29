@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<!-- If a scope is set to singleton, the Spring IoC container creates exactly
+ one instance of the object defined by that bean definition. 
+ This single instance is stored in a cache of such singleton beans, 
+ and all subsequent requests and references for that named bean return the cached object. -->
+ 
+   <bean id = "places" class = "com.digit.Scope.Places" scope = "singleton">
+   </bean>
+
+</beans>
